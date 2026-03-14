@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Phone, Eye, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 import PageTransition from "@/components/ui/PageTransition";
 import { personalInfo } from "@/data/portfolio";
@@ -43,8 +42,6 @@ const contactLinks = [
 ];
 
 export default function ContactPage() {
-  const [phoneRevealed, setPhoneRevealed] = useState(false);
-
   return (
     <PageTransition>
       <div className="min-h-screen pt-28 pb-20 px-4 max-w-5xl mx-auto">
@@ -110,32 +107,6 @@ export default function ContactPage() {
                   <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-60 transition-opacity flex-shrink-0" />
                 </a>
               ))}
-
-              {/* Phone (hidden behind reveal) */}
-              <div className="p-4 glass-card">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-gray-100/80 dark:bg-white/8 border border-gray-200/60 dark:border-white/8">
-                    <Phone className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-[10px] text-gray-400 dark:text-gray-500 font-medium uppercase tracking-widest mb-0.5">
-                      Phone
-                    </div>
-                    {phoneRevealed ? (
-                      <div className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                        +91 XXXXX XXXXX
-                      </div>
-                    ) : (
-                      <button
-                        onClick={() => setPhoneRevealed(true)}
-                        className="flex items-center gap-1.5 text-sm text-primary-500 font-medium hover:text-primary-600 transition-colors"
-                      >
-                        <Eye className="w-3.5 h-3.5" /> Reveal Contact
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Response time */}
