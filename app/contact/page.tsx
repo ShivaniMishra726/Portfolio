@@ -32,6 +32,14 @@ const contactLinks = [
     color: "hover:text-primary-500",
     bg: "hover:bg-primary-50/50 dark:hover:bg-primary-900/10",
   },
+  {
+    icon: Mail,
+    label: "Personal Email",
+    value: personalInfo.emailPersonal,
+    href: `mailto:${personalInfo.emailPersonal}`,
+    color: "hover:text-primary-500",
+    bg: "hover:bg-primary-50/50 dark:hover:bg-primary-900/10",
+  },
 ];
 
 export default function ContactPage() {
