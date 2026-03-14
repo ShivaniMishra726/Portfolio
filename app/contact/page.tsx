@@ -105,6 +105,7 @@ export default function ContactPage() {
                     </div>
                     {phoneRevealed ? (
                       <div className="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                        {/* Replace with actual phone number */}
                         +91 XXXXX XXXXX
                       </div>
                     ) : (
