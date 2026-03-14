@@ -6,9 +6,10 @@ export const personalInfo = {
   university: "IGDTUW, Delhi",
   tagline: "Building intelligent systems through engineering, code, and curiosity.",
   achievementHighlight: "2nd Runner's Up — Industrial Ideathon 2025",
-  email: "shivani@igdtuw.ac.in",
+  email: "shivani073btmae24@igdtuw.ac.in",
+  emailPersonal: "shivani.official726@gmail.com",
   github: "https://github.com/ShivaniMishra726",
-  linkedin: "https://linkedin.com/in/shivanimishra726",
+  linkedin: "https://www.linkedin.com/in/shivani-mishra-59a221276/",
   year: "2nd Year",
 };
 
