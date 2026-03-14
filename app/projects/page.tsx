@@ -11,7 +11,7 @@ async function ProjectsList() {
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 max-w-7xl mx-auto">
+    <div className="min-h-screen pt-28 pb-20 px-4 max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-16">
         <h1 className="section-title">Projects</h1>
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
       <Suspense
         fallback={
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {Array.from({ length: 6 }).map((_, i) => (
               <ProjectSkeleton key={i} />
             ))}

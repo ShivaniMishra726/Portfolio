@@ -1,29 +1,29 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-white/50 dark:bg-gray-950/80 border-t border-gray-200/50 dark:border-gray-800/50 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="border-t border-gray-200/60 dark:border-white/[0.06] mt-auto bg-white/40 dark:bg-[#07070f]/60 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="font-heading font-bold text-xl text-gray-900 dark:text-white mb-2">
+            <h3 className="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3 tracking-tight">
               Shivani<span className="text-primary-500"> Mishra</span>
             </h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              Mechanical & Automation Engineering Student at IGDTUW, Delhi.
+            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-xs">
+              Mechanical & Automation Engineering student at IGDTUW, Delhi. Building at the intersection of engineering and AI.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 text-sm uppercase tracking-wider">
-              Quick Links
+            <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-4 uppercase tracking-widest">
+              Navigation
             </h4>
-            <div className="grid grid-cols-2 gap-1">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               {[
                 { href: "/about", label: "About" },
                 { href: "/academics", label: "Academics" },
@@ -35,7 +35,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-150"
                 >
                   {link.label}
                 </Link>
@@ -45,45 +45,48 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 text-sm uppercase tracking-wider">
+            <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 mb-4 uppercase tracking-widest">
               Connect
             </h4>
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-2">
               <a
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-500 hover:text-white transition-all"
-                aria-label="GitHub"
+                className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
               >
                 <Github className="w-4 h-4" />
+                <span>GitHub</span>
+                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-500 hover:text-white transition-all"
-                aria-label="LinkedIn"
+                className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
                 <Linkedin className="w-4 h-4" />
+                <span>LinkedIn</span>
+                <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-500 hover:text-white transition-all"
-                aria-label="Email"
+                aria-label={`Email Shivani Mishra at ${personalInfo.email}`}
+                className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors group"
               >
                 <Mail className="w-4 h-4" />
+                <span>{personalInfo.email}</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-gray-200/50 dark:border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-10 pt-6 border-t border-gray-200/60 dark:border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-gray-400 dark:text-gray-500">
             © {currentYear} Shivani Mishra. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
-            Built with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> using Next.js & Tailwind
+          <p className="text-xs text-gray-400 dark:text-gray-500">
+            Built with Next.js & Tailwind CSS
           </p>
         </div>
       </div>

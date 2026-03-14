@@ -47,7 +47,7 @@ export default function ContactForm() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       onSubmit={handleSubmit}
-      className="glass-card p-8 space-y-5"
+      className="glass-card p-6 space-y-5"
     >
       {/* Name */}
       <div>
